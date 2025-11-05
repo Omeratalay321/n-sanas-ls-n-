@@ -1,34 +1,43 @@
-/* style.css dosyası - GÜNCELLENMİŞ VERSİYON */
+/* style.css dosyası - PEMBE & BEYAZ TEMA */
+
+/* Renk Paleti:
+   #FCE4EC: Çok Açık Pembe (Hafif arka plan)
+   #FFB6C1: Açık Pembe (Butonlar, Gradient Başlangıç)
+   #FF69B4: Canlı Pembe (Vurgu, Hover rengi)
+   #FFFFFF: Beyaz
+   #333333: Koyu Gri (Metin)
+*/
 
 body {
-    font-family: 'Poppins', sans-serif; /* Daha modern bir font */
+    font-family: 'Poppins', sans-serif; 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%); /* Hafif Mavi Gradient */
+    /* Açık pembe ve beyazın tatlı bir geçişi */
+    background: linear-gradient(135deg, #FFB6C1 0%, #FCE4EC 100%); 
     transition: background 0.5s ease;
 }
 .container {
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 15px; /* Daha yuvarlak köşeler */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Daha derin gölge */
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2); /* Pembe tonunda derin gölge */
     text-align: center;
     width: 90%;
     max-width: 450px;
-    animation: fadeIn 1s ease-out; /* Açılış animasyonu */
+    animation: fadeIn 1s ease-out; 
 }
 h1 {
-    color: #1d3557; /* Koyu mavi başlık rengi */
+    color: #333333; /* Koyu gri başlık rengi */
     margin-bottom: 30px;
     font-size: 1.8em;
     font-weight: 600;
 }
 .buttons button {
-    background-color: #457b9d; /* Ana tema rengi */
-    color: white;
+    background-color: #FFB6C1; /* Açık Pembe Buton rengi */
+    color: #333333;
     border: none;
     padding: 12px 25px;
     margin: 8px;
@@ -40,22 +49,24 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .buttons button:hover {
-    background-color: #1d3557; /* Koyu tona geçiş */
-    transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
+    background-color: #FF69B4; /* Canlı Pembe (Vurgu) tona geçiş */
+    color: white; /* Hover'da metni beyaz yap */
+    transform: translateY(-2px); 
 }
 .result {
     margin-top: 30px;
     font-size: 1.3em;
-    color: #333;
+    color: #333333;
     min-height: 50px;
     line-height: 1.5;
 }
 /* Üzgün Butonları için özel renk */
 .sad-options button {
-    background-color: #e63946; /* Kırmızımsı Ton */
+    background-color: #FF69B4; /* Daha canlı bir Pembe */
+    color: white;
 }
 .sad-options button:hover {
-    background-color: #c92a34;
+    background-color: #e30b5c; /* Fuşya/Koyu Pembe */
 }
 
 /* Açılış Animasyonu */
