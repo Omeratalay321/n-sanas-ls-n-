@@ -4,57 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nisa'ya Özel Soru</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 1.5em;
-        }
-        .buttons button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        .buttons button:hover {
-            background-color: #0056b3;
-        }
-        .result {
-            margin-top: 25px;
-            font-size: 1.2em;
-            color: #555;
-            min-height: 50px;
-        }
-        .sad-options button {
-            background-color: #dc3545; /* Kırmızı Tonu */
-        }
-        .sad-options button:hover {
-            background-color: #c82333;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css"> 
+    
 </head>
 <body>
 
@@ -75,54 +27,7 @@
     <div id="result-text" class="result"></div>
 </div>
 
-<script>
-    const questionText = document.getElementById('question-text');
-    const initialButtons = document.getElementById('initial-buttons');
-    const sadButtons = document.getElementById('sad-buttons');
-    const resultText = document.getElementById('result-text');
-
-    // İyi veya Kötü seçildiğinde
-    function handleInitial(state) {
-        initialButtons.style.display = 'none'; // Başlangıç butonlarını gizle
-
-        if (state === 'iyi') {
-            // İyiyim seçildi
-            questionText.textContent = "Güzel! İyi olmana çok sevindim! :)";
-            resultText.textContent = "Umarım günün harika geçer!";
-        } else {
-            // Kötüyüm seçildi
-            questionText.textContent = "Ah, neden üzgünsün?";
-            sadButtons.style.display = 'block'; // Üzgün butonlarını göster
-        }
-    }
-
-    // Üzgünüm, Kırgınım veya İyi Hissetmiyorum seçildiğinde
-    function handleSad(reason) {
-        sadButtons.style.display = 'none'; // Üzgün butonlarını gizle
-
-        let encouragement = "";
-        
-        // Sana özel söz!
-        const specialMessage = "İyi hissetmen için bir söz: (Ömer! Saçın turuncu olmuş!😮😮)";
-
-        switch(reason) {
-            case 'üzgünüm':
-                encouragement = "Üzgün olsan da, en kötü günün böyle olsun. Unutma, sen değerlisin!";
-                break;
-            case 'kırgınım':
-                encouragement = "Kırgınlıklar geçer. Kim seni kırdıysa, bil ki senin değerini bilmiyordur.";
-                break;
-            case 'iyiHissetmiyorum':
-                encouragement = "Bazen hepimiz böyle hissederiz. Önemli olan kendine iyi bakman.";
-                break;
-        }
-
-        // Sonucu ekrana yazdır ve özel sözü ekle
-        questionText.textContent = encouragement;
-        resultText.innerHTML = `<span style="color: #007bff; font-weight: bold;">(İyi hissetmen için özel söz)</span>: ${specialMessage}`;
-    }
-</script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
