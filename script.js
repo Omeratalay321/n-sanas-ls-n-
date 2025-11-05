@@ -27,7 +27,7 @@ function handleSad(reason) {
     let encouragement = "";
     
     // Sana özel söz!
-    const specialMessage = "Saçın turuncu olmuş! (ve bu çok yakışmış!)";
+    const specialMessage = "Ömer saçın turuncu olmuşşşş 😮";
 
     switch(reason) {
         case 'üzgünüm':
@@ -44,4 +44,5 @@ function handleSad(reason) {
     // Sonucu ekrana yazdır ve özel sözü ekle
     questionText.textContent = encouragement;
     resultText.innerHTML = `<span style="color: #007bff; font-weight: bold;">(İyi hissetmen için özel söz)</span>: ${specialMessage}`;
+
 }
